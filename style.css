@@ -1,0 +1,72 @@
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #5a5a5a;
+  --border: #e2e2e2;
+  --accent: #1f5fa8;
+  --card-bg: #f6f8fa;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #16181c;
+    --text: #e9e9e9;
+    --muted: #a3a3a3;
+    --border: #2c2f36;
+    --accent: #7db1e8;
+    --card-bg: #1e2126;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #16181c;
+  --text: #e9e9e9;
+  --muted: #a3a3a3;
+  --border: #2c2f36;
+  --accent: #7db1e8;
+  --card-bg: #1e2126;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  margin: 0;
+  padding: 0;
+}
+.nav {
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.nav .logo { font-weight: 800; font-size: 18px; color: var(--accent); text-decoration: none; }
+.nav a { color: var(--text); text-decoration: none; margin-left: 20px; font-size: 14px; }
+.nav a:hover { color: var(--accent); }
+.wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+header.page-header { border-bottom: 3px solid var(--accent); padding-bottom: 20px; margin-bottom: 32px; }
+header.page-header .brand { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+h1 { font-size: 30px; margin: 8px 0 4px; }
+.updated { color: var(--muted); font-size: 14px; }
+h2 { font-size: 19px; margin-top: 36px; border-left: 4px solid var(--accent); padding-left: 12px; }
+p, li, label { font-size: 15.5px; }
+ul { padding-left: 22px; }
+.callout { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; margin: 18px 0; }
+.callout strong { color: var(--accent); }
+a { color: var(--accent); }
+footer.page-footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; }
+.hero { text-align: center; padding: 60px 24px; }
+.hero h1 { font-size: 36px; margin-bottom: 12px; }
+.hero p { color: var(--muted); font-size: 17px; max-width: 520px; margin: 0 auto; }
+.btn { display: inline-block; margin-top: 24px; background: var(--accent); color: #fff; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+form { display: flex; flex-direction: column; gap: 18px; margin-top: 20px; }
+.field label { display: block; font-weight: 600; margin-bottom: 6px; }
+.field input, .field textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 15px; }
+.checkbox-row { display: flex; gap: 10px; align-items: flex-start; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
+.checkbox-row input { margin-top: 4px; }
+.checkbox-row label { font-size: 14px; font-weight: 400; color: var(--text); }
+button[type="submit"] { background: var(--accent); color: #fff; border: none; padding: 13px 24px; border-radius: 8px; font-size: 15.5px; font-weight: 600; cursor: pointer; width: fit-content; }
+button[type="submit"]:hover { opacity: 0.9; }
+.required { color: #b3241a; }
